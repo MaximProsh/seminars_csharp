@@ -1,4 +1,77 @@
-﻿
+﻿// Задача 15: Напишите программу, которая принимает на вход цифру, 
+// обозначающую день недели, и проверяет, является ли этот день выходным.
+int num = Convert.ToInt32(Console.ReadLine());
+
+if (num >= 1 & num <= 7)
+{
+    if (num == 6 ^ num == 7)
+    {
+        Console.WriteLine("Выходной день");
+    }
+    else
+    {
+        Console.WriteLine("Будний день");
+    }
+}
+else
+{
+    Console.WriteLine("Неверный ввод. Наберите цифру с 1 до 7");
+}
+
+
+
+
+
+// Задача 13: Напишите программу, которая выводит 
+// третью цифру заданного числа или сообщает, что третьей цифры нет.
+
+// void ThirdNum(int num)
+// {
+//     int count = 0;
+//     int sumnum = num;
+// while(sumnum > 1) // выясняем, сколько цифр в числе
+//     {
+//         sumnum = sumnum / 10;
+//         count++;
+//     }
+
+//     int rightminus = count - 3; // определяем, скольк цифр справа до третьей цифры числа слева
+
+//     if (rightminus < 0)
+//     {
+//         Console.WriteLine("Третьей цифры нет");
+//     }
+//     else
+//     {
+//         while(rightminus != 0) // уменьшаем изначальное число до трёхзначного
+//         {
+//             num = num / 10;
+//             rightminus--;
+//         }
+//         int result = num % 10; // вычисляем результат - третью цифру, если она тут есть
+//         Console.WriteLine($"Третья цифра числа: {result}");
+//     }
+// }
+
+// int num = Convert.ToInt32(Console.ReadLine());
+// ThirdNum(num);
+
+
+
+// Задача 10: Напишите программу, которая принимает на вход трёхзначное число
+// и на выходе показывает вторую цифру этого числа.
+// int SecondNum(int x)
+// {
+//     int twodigit = x / 10;
+//     int result = twodigit % 10;
+//     return result;
+// }
+
+// int randnum = new Random().Next(100, 1000);
+// Console.WriteLine($"Входящее число: {randnum}");
+// Console.WriteLine($"Вторая цифра числа: {SecondNum(randnum)}");
+
+
 // int randnum = new Random().Next(100, 1000);
 // int fnum = randnum / 100;
 // int lnum = randnum % 10;
@@ -48,7 +121,7 @@
 //         }
 //         index++;
 //     }
-    
+
 //     return position;
 // }
 
