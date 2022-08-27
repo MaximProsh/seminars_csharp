@@ -1,21 +1,23 @@
-﻿int num = Convert.ToInt32(Console.ReadLine());
+﻿// Задача 23
+// Напишите программу, которая принимает на вход число (N) 
+// и выдаёт таблицу кубов чисел от 1 до N.
 
-int CubeTable(int num)
-{
-    int count = 0;
-    int[] table = new int[num];
-    while (count != num)
-    {
-        table[count] = Convert.ToInt32(Math.Pow(count + 1, 3));
-        Console.Write(table[count]);
-        Console.Write(" ");
-        count ++;
-    }
-    Console.WriteLine();
-    return -1;
-}
+// int num = Convert.ToInt32(Console.ReadLine());
 
-CubeTable(num);
+// int[] CubeTable(int num)
+// {
+//     int count = 0;
+//     int[] table = new int[num];
+//     while (count != num)
+//     {
+//         table[count] = Convert.ToInt32(Math.Pow(count + 1, 3));
+//         count ++;
+//     }
+//     return table;
+// }
+
+// Console.WriteLine(string.Join(",", CubeTable(num)));
+
 
 // Задача 21
 // Напишите программу, которая принимает на вход координаты двух точек 
@@ -42,7 +44,7 @@ CubeTable(num);
 //и проверяет, является ли оно палиндромом.
 // string? num = Console.ReadLine();
 
-// int IsPalindromeOddNum(string num)
+// bool IsPalindromeOddNum(string num)
 // {
 //     int count = 0;
 //     int thesamenums = 0;
@@ -56,16 +58,24 @@ CubeTable(num);
 //     }
 //     if (thesamenums == (num.Length - 1) / 2)
 //     {
-//         Console.WriteLine("The number IS a palindrome");
+//         return true;
 //     }
 //     else
 //     {
-//         Console.WriteLine("The number is NOT a palindrome");
+//         return false;
 //     }
-//     return -1;
 // }
 
-// IsPalindromeOddNum(num);
+// if (IsPalindromeOddNum(num))
+// {
+//     Console.WriteLine("The number IS a palindrome");
+// }
+
+// if (!IsPalindromeOddNum(num))
+// {
+//     Console.WriteLine("The number is NOT a palindrome");
+// }
+
 
 
 
