@@ -1,22 +1,148 @@
-﻿// Задача 15: Напишите программу, которая принимает на вход цифру, 
-// обозначающую день недели, и проверяет, является ли этот день выходным.
-int num = Convert.ToInt32(Console.ReadLine());
+﻿int num = Convert.ToInt32(Console.ReadLine());
 
-if (num >= 1 & num <= 7)
+int CubeTable(int num)
 {
-    if (num == 6 ^ num == 7)
+    int count = 0;
+    int[] table = new int[num];
+    while (count != num)
     {
-        Console.WriteLine("Выходной день");
+        table[count] = Convert.ToInt32(Math.Pow(count + 1, 3));
+        Console.Write(table[count]);
+        Console.Write(" ");
+        count ++;
     }
-    else
-    {
-        Console.WriteLine("Будний день");
-    }
+    Console.WriteLine();
+    return -1;
 }
-else
-{
-    Console.WriteLine("Неверный ввод. Наберите цифру с 1 до 7");
-}
+
+CubeTable(num);
+
+// Задача 21
+// Напишите программу, которая принимает на вход координаты двух точек 
+// и находит расстояние между ними в 3D пространстве.
+
+// int x1 = Convert.ToInt32(Console.ReadLine());
+// int y1 = Convert.ToInt32(Console.ReadLine());
+// int z1 = Convert.ToInt32(Console.ReadLine());
+
+// int x2 = Convert.ToInt32(Console.ReadLine());
+// int y2 = Convert.ToInt32(Console.ReadLine());
+// int z2 = Convert.ToInt32(Console.ReadLine());
+
+// double Distance(int x1, int y1, int z1, int x2, int y2, int z2)
+// {
+//     double result = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2) + Math.Pow((z2 - z1), 2));
+//     return result;
+// }
+
+// Console.WriteLine(Math.Round(Distance(x1, y1, z1, x2, y2, z2), 2));
+
+
+//Задача 19. Напишите программу, которая принимает на вход пятизначное число
+//и проверяет, является ли оно палиндромом.
+// string? num = Console.ReadLine();
+
+// int IsPalindromeOddNum(string num)
+// {
+//     int count = 0;
+//     int thesamenums = 0;
+//     while (count != ((num.Length - 1) / 2))
+//     {
+//         if (num[count] == num[(num.Length - 1) - count])
+//         {
+//              thesamenums ++;
+//         }
+//        count ++;
+//     }
+//     if (thesamenums == (num.Length - 1) / 2)
+//     {
+//         Console.WriteLine("The number IS a palindrome");
+//     }
+//     else
+//     {
+//         Console.WriteLine("The number is NOT a palindrome");
+//     }
+//     return -1;
+// }
+
+// IsPalindromeOddNum(num);
+
+
+
+
+// string? num = Console.ReadLine();
+
+// int CheckIfNum(string num)
+// {
+//     bool Xnum = int.TryParse(num, out int x);
+//     if (Xnum != true)
+//     {
+//         Console.WriteLine("This is no number");
+//     }
+//     return x;
+// }
+
+// CheckIfNum(num);
+
+// Console.WriteLine("Введите x:");
+// bool Xnum = int.TryParse(Console.ReadLine(), out int x);
+// Console.WriteLine("Введите y:");
+// bool Ynum = int.TryParse(Console.ReadLine(), out int y);
+
+// if (Xnum != true || Ynum != true)
+// {
+//     Console.WriteLine("Числа введены не верно");
+//     return;
+// }
+
+
+// int GetPosition(int x, int y)
+// {
+//     if (x > 0 && y > 0)
+//     {
+//         return 1;
+//     }
+
+//     if (x < 0 && y > 0)
+//     {
+//         return 2;
+//     }
+
+//     if (x < 0 && y < 0)
+//     {
+//         return 3;
+//     }
+
+//     if (x > 0 && y < 0)
+//     {
+//         return 4;
+//     }
+    
+//     return -1;
+// }
+
+// Console.WriteLine(GetPosition(x, y));
+
+
+// // Задача 15: Напишите программу, которая принимает на вход цифру, 
+// // обозначающую день недели, и проверяет, является ли этот день выходным.
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// if (num >= 1 & num <= 7)
+// {
+//     if (num == 6 ^ num == 7)
+//     {
+//         Console.WriteLine("Выходной день");
+//     }
+//     else
+//     {
+//         Console.WriteLine("Будний день");
+//     }
+// }
+// else
+// {
+//     Console.WriteLine("Неверный ввод. Наберите цифру с 1 до 7");
+// }
 
 
 
