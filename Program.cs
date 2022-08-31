@@ -1,14 +1,57 @@
 ﻿// Задача 29: Напишите программу, которая задаёт 
 // массив из 8 элементов и выводит их на экран.
-int[] array = new int[8];
-Random rand = new Random();
+Console.Write("How many elements wil in the array: ");
+int dimension = Convert.ToInt32(Console.ReadLine());
+int[] arr = new int[dimension];
 
-for (int i = 0; i < array.Length; i++)
+int[] BuildArr(int[] arr, int dimension)
 {
-    array[i] = rand.Next(1, 100);
+    int count = 1;    
+    while(count < dimension + 1)
+    {
+        Console.Write($"Input {count} element of the array: ");
+        arr[count - 1] = Convert.ToInt32(Console.ReadLine());
+        count ++;
+    }
+    return arr;
 }
 
-Console.WriteLine(string.Join(",", array));
+void PrintArr(int[] arr)
+{
+    Console.Write('[');
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (i == arr.Length - 1)
+        {
+            Console.Write($"{arr[i]}");
+        }
+        else
+        {
+            Console.Write($"{arr[i]},");
+        }
+    }
+    Console.WriteLine(']');
+}
+
+BuildArr(arr, dimension);
+PrintArr(arr);
+
+
+
+
+
+
+
+
+// int[] array = new int[8];
+// Random rand = new Random();
+
+// for (int i = 0; i < array.Length; i++)
+// {
+//     array[i] = rand.Next(1, 100);
+// }
+
+// Console.WriteLine(string.Join(",", array));
 
 
 // Задача 27: Напишите программу, которая принимает на вход 
