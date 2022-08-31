@@ -1,4 +1,145 @@
-﻿// Задача 23
+﻿// Задача 29: Напишите программу, которая задаёт 
+// массив из 8 элементов и выводит их на экран.
+int[] array = new int[8];
+Random rand = new Random();
+
+for (int i = 0; i < array.Length; i++)
+{
+    array[i] = rand.Next(1, 100);
+}
+
+Console.WriteLine(string.Join(",", array));
+
+
+// Задача 27: Напишите программу, которая принимает на вход 
+// число и выдаёт сумму цифр в числе.
+// using static System.Console;
+// #nullable disable
+
+// Write("Input a number: ");
+// string number = ReadLine();
+
+// bool CheckIfNum(string num)
+// {
+//     bool Xnum = int.TryParse(num, out int x);
+//     if (Xnum != true)
+//     {
+//         return false;
+//     }
+//     return true;
+// }
+
+// int SumInNum(string number)
+// {
+//     int result = 0;
+//     for (int i = 0; i < number.Length; i++)
+//     {
+//         int tonum;
+//         char everyn = number[i];
+//         tonum = everyn - '0';
+//         result += tonum;
+//     }
+//     return result;
+// }
+
+// if (CheckIfNum(number))
+// {
+//     WriteLine($"The sum of digits in the number: {SumInNum(number)}");
+// }
+// else
+// {
+//     WriteLine("Wrong input");
+// }
+
+
+
+
+
+
+// Задача 25: Напишите цикл, который принимает на вход 
+// два числа (A и B) и возводит число A в натуральную степень B.
+// using static System.Console;
+// #nullable disable
+
+// Write("Input number а: ");
+// int a = int.Parse(ReadLine());
+// Write("Input number b: ");
+// int b = int.Parse(ReadLine());
+
+// int GetPower(int a, int b)
+// {
+//     int result = 1;
+//     for (int i = 0; i < b; i++)
+//     {
+//         result *= a;
+//     }
+//     return result;
+// }
+
+// int numineq = GetPower(a, b);
+// WriteLine($"{a} to the {b} power equals {numineq}");
+
+
+// int[] arr = {2, 5, 5, 9, 1, 8, 8, 4, 3, 7, 6};
+
+// void PrintArray(int [] array)
+// {
+//     int count = array.Length;
+//     for (int i = 0;  i < count; i++)
+//     {
+//         Console.Write($"{arr[i]} ");
+//     }
+//     Console.WriteLine();
+// }
+
+// void SelectionSort(int[] array)
+// {
+//     for (int i = 0; i < array.Length - 1; i++)
+//     {
+//         int minPosition = i;
+
+//         for (int j = i + 1; j < array.Length; j++)
+//         {
+//             if (array[j] < array[minPosition]) minPosition = j;
+//         }
+        
+//         int temporary = array[i];
+//         array[i] = array[minPosition];
+//         array[minPosition] = temporary;
+//     }
+// }
+
+
+// PrintArray(arr);
+// SelectionSort(arr);
+// PrintArray(arr);
+
+
+// string text = "- Я думаю, - сказал князь, улыбаясь, - что "
+//             + "ежели бы вас послали вместо нашего милого Винценгероде,"
+//             + "вы бы взяли приступом согласие прусского короля."
+//             + "- Вы так красноречивы. Вы дадите мне чаю?";
+
+// string Replace (string text, char oldValue, char newValue)
+// {
+//     string result = String.Empty;
+//     int length = text.Length;
+//     for (int i = 0; i < length; i++)
+//     {
+//         if(text[i] == oldValue) result = result + $"{newValue}";
+//         else result = result + $"{text[i]}";
+//     }
+
+//     return result;
+// }
+
+// string newText = Replace(text, ' ', '|');
+// Console.WriteLine(newText);
+// newText = Replace(newText, 'к', 'К');
+// Console.WriteLine(newText);
+
+
+// Задача 23
 // Напишите программу, которая принимает на вход число (N) 
 // и выдаёт таблицу кубов чисел от 1 до N.
 
@@ -6,14 +147,30 @@
 
 // int[] CubeTable(int num)
 // {
-//     int count = 0;
-//     int[] table = new int[num];
-//     while (count != num)
+//     if (num > 0)
 //     {
-//         table[count] = Convert.ToInt32(Math.Pow(count + 1, 3));
-//         count ++;
+//         int count = 0;
+//         int[] table = new int[num];
+//         while (count != num)
+//         {
+//             table[count] = Convert.ToInt32(Math.Pow(count + 1, 3));
+//             count ++;
+//         }
+//         return table;
 //     }
-//     return table;
+//     if (num <= 0)
+//     {
+//         int count = 1;
+//         int[] table = new int[num];
+//         while (count != num)
+//         {
+//             table[count] = Convert.ToInt32(Math.Pow(count, 3));
+//             count --;
+//         }
+//         return table;
+//     }
+//     int[] mist = {0};
+//     return mist;
 // }
 
 // Console.WriteLine(string.Join(",", CubeTable(num)));
@@ -87,7 +244,7 @@
 //     bool Xnum = int.TryParse(num, out int x);
 //     if (Xnum != true)
 //     {
-//         Console.WriteLine("This is no number");
+//         Console.WriteLine("This is not a number");
 //     }
 //     return x;
 // }
