@@ -1,46 +1,214 @@
-﻿// Задача 29: Напишите программу, которая задаёт 
+﻿// Задача 38: Задайте массив вещественных чисел. Найдите разницу 
+// между максимальным и минимальным элементов массива.
+// [3 7 22 2 78] -> 76
+bool IsNumber = int.TryParse(Console.ReadLine(), out int length);
+if (!IsNumber || length == 0)
+{
+    Console.WriteLine("Invalid input");
+    return;
+}
+
+Random rnd = new Random();
+int[] array = new int[length];
+
+for (int i = 0; i < array.Length; i++)
+{
+    array[i] = rnd.Next(1, 99);
+}
+
+int GetMaxinArr(int[] array)
+{
+    int max = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if(array[i] > max)
+        {
+            max = array[i];
+        }
+    }
+    return max;
+}
+
+int GetMininArr(int[] array)
+{
+    int min = array[0];
+    for (int i = 0; i < array.Length; i++)
+    {
+        if(array[i] < min)
+        {
+            min = array[i];
+        }
+    }
+    return min;
+}
+
+int result = GetMaxinArr(array) - GetMininArr(array);
+
+Console.WriteLine(string.Join(", ", array));
+Console.WriteLine(GetMaxinArr(array));
+Console.WriteLine(GetMininArr(array));
+Console.WriteLine(result);
+
+
+// Задача 36: Задайте одномерный массив, заполненный случайными числами. 
+// Найдите сумму элементов, стоящих на нечётных позициях.
+// [3, 7, 23, 12] -> 19
+// [-4, -6, 89, 6] -> 0
+// bool IsNumber = int.TryParse(Console.ReadLine(), out int length);
+// if (!IsNumber || length == 0)
+// {
+//     Console.WriteLine("Invalid input");
+//     return;
+// }
+
+// int[] array = new int[length];
+// Random rand = new Random();
+// for (int i = 0; i < array.Length; i++)
+// {
+//     array[i] = rand.Next(-99, 99);
+// }
+
+// int GetSumOddNums(int[] array)
+// {
+//     int count = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if(i % 2 == 0)
+//         {
+//             count += array[i];
+//         }
+//     }
+//     return count;
+// }
+
+// Console.WriteLine(string.Join(",", array));
+// Console.WriteLine(GetSumOddNums(array));
+
+
+
+
+
+
+
+
+// // Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. 
+// // Напишите программу, которая покажет количество чётных чисел в массиве.
+// // [345, 897, 568, 234] -> 2
+// bool IsNumber = int.TryParse(Console.ReadLine(), out int length);
+// if (!IsNumber)
+// {
+//     Console.WriteLine("Invalid input");
+//     return;
+// }
+
+// int[] array = new int[length];
+// Random rand = new Random();
+// for (int i = 0; i < array.Length; i++)
+// {
+//     array[i] = rand.Next(100, 999);
+// }
+
+// int GetSumEvenNums(int[] array)
+// {
+//     int count = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if(array[i] % 2 == 0)
+//         {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+
+// Console.WriteLine(string.Join(",", array));
+// Console.WriteLine(GetSumEvenNums(array));
+
+
+
+
+// bool IsNumber = int.TryParse(Console.ReadLine(), out int length);
+// if (!IsNumber)
+// {
+//     Console.WriteLine("Invalid input");
+//     return;
+// }
+
+// int[] array = new int[length];
+// Random rand = new Random();
+// for (int i = 0; i < array.Length; i++)
+// {
+//     array[i] = rand.Next(-9, 9);
+// }
+
+// int SumPositive(int[] array)
+// {
+//     int count = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if(array[i] > 0)
+//         {
+//             count += array[i];
+//         }
+//     }
+//     return count;
+// }
+
+// int SumNegative(int[] array)
+// {
+//     int count = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if(array[i] < 0)
+//         {
+//             count += array[i];
+//         }
+//     }
+//     return count;
+// }
+
+// Console.WriteLine(string.Join(",", array));
+// Console.WriteLine(SumPositive(array));
+// Console.WriteLine(SumNegative(array));
+
+
+// Задача 29: Напишите программу, которая задаёт 
 // массив из 8 элементов и выводит их на экран.
-Console.Write("How many elements wil in the array: ");
-int dimension = Convert.ToInt32(Console.ReadLine());
-int[] arr = new int[dimension];
+// Console.Write("How many elements will in the array: ");
+// int dimension = Convert.ToInt32(Console.ReadLine());
+// int[] arr = new int[dimension];
 
-int[] BuildArr(int[] arr, int dimension)
-{
-    int count = 1;    
-    while(count < dimension + 1)
-    {
-        Console.Write($"Input {count} element of the array: ");
-        arr[count - 1] = Convert.ToInt32(Console.ReadLine());
-        count ++;
-    }
-    return arr;
-}
+// int[] BuildArr(int[] arr, int dimension)
+// {
+//     int count = 1;    
+//     while(count < dimension + 1)
+//     {
+//         Console.Write($"Input {count} element of the array: ");
+//         arr[count - 1] = Convert.ToInt32(Console.ReadLine());
+//         count ++;
+//     }
+//     return arr;
+// }
 
-void PrintArr(int[] arr)
-{
-    Console.Write('[');
-    for (int i = 0; i < arr.Length; i++)
-    {
-        if (i == arr.Length - 1)
-        {
-            Console.Write($"{arr[i]}");
-        }
-        else
-        {
-            Console.Write($"{arr[i]},");
-        }
-    }
-    Console.WriteLine(']');
-}
+// void PrintArr(int[] arr)
+// {
+//     Console.Write('[');
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         if (i == arr.Length - 1)
+//         {
+//             Console.Write($"{arr[i]}");
+//         }
+//         else
+//         {
+//             Console.Write($"{arr[i]},");
+//         }
+//     }
+//     Console.WriteLine(']');
+// }
 
-BuildArr(arr, dimension);
-PrintArr(arr);
-
-
-
-
-
-
+// BuildArr(arr, dimension);
+// PrintArr(arr);
 
 
 // int[] array = new int[8];
