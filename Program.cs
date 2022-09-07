@@ -1,53 +1,201 @@
-﻿// Задача 38: Задайте массив вещественных чисел. Найдите разницу 
+﻿
+
+
+
+
+
+// double Fibonacci(int n)
+// {
+//     if (n == 1 || n == 2) return 1;
+//     else return Fibonacci(n - 1) + Fibonacci(n - 2);
+// }
+
+// for (int i = 1; i < 100; i++)
+// {
+//    Console.WriteLine($"{i} = {Fibonacci(i)}"); 
+// }
+
+
+
+// double Factorial(int n)
+// {
+//     if (n == 1) return 1;
+//     else return n * Factorial(n - 1);
+    
+// }
+// // Console.WriteLine(Factorial(10));
+
+// for (int i = 1; i < 40; i++)
+// {
+//     Console.WriteLine($"{i}! = {Factorial(i)}");
+// }
+
+
+// int[,] pic = new int[,]
+// {
+// {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+// {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+// {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+// {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+// {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+// {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+// {0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+// {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+// {0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+// {0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0 },
+// {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0 },
+// {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0 },
+// {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0 },
+// {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0 },
+// {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0 },
+// {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0 },
+// {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0 },
+// {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0 },
+// {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0 },
+// {0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0 },
+// {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0 },
+// {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0 },
+// {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+// };
+// void PrintImage(int[,] image)
+// {
+//     for (int i = 0; i < image.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < image.GetLength(1); j++)
+//         {
+//             // Console.Write($"{image[i, j]} ");
+//             if (image[i, j] == 0)
+//             {
+//                 Console.Write($" ");
+//             }
+//             else Console.Write($"+");
+//         }
+//         Console.WriteLine();
+//     }    
+// }
+// PrintImage(pic);
+
+// void FillImage(int row, int col)
+// {
+//     if (pic[row, col] == 0)
+//     {
+//         pic[row, col] = 1;
+//         FillImage(row-1, col);
+//         FillImage(row, col-1);
+//         FillImage(row+1, col);
+//         FillImage(row, col+1);
+//     }
+// }
+// FillImage(11, 4);
+// PrintImage(pic);
+
+
+
+// void PrintAr(int[,] matr)
+// {
+//     for (int i = 0; i < matr.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matr.GetLength(1); j++)
+//         {
+//             Console.Write($"{matr[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }    
+// }
+
+
+// void FillArr(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             matrix[i, j] = new Random().Next(-100, 100);
+//         }
+//     }
+// }
+
+// int[,] matr = new int[3, 5];
+// FillArr(matr);
+// PrintAr(matr);
+
+
+// int[,] matrix = new int[3, 5];
+// for (int i = 0; i < matrix.GetLength(0); i++)
+// {
+//     for (int j = 0; j < matrix.GetLength(1); j++)
+//     {
+//         Console.Write($"{j + i} ");
+//     }
+//     Console.WriteLine();
+// }
+
+
+
+// string[,] table = new string[2, 5];
+// table[1, 2] = "слово";
+
+// for (int rows = 0; rows < 2; rows++)
+// {
+//     for (int columns = 0; columns < 5; columns++)
+//     {
+//         Console.Write($"{table[rows, columns]}-");
+//     }
+//     Console.WriteLine();
+// }
+
+
+
+// 38: Задайте массив вещественных чисел. Найдите разницу 
 // между максимальным и минимальным элементов массива.
 // [3 7 22 2 78] -> 76
-bool IsNumber = int.TryParse(Console.ReadLine(), out int length);
-if (!IsNumber || length == 0)
-{
-    Console.WriteLine("Invalid input");
-    return;
-}
+// bool IsNumber = int.TryParse(Console.ReadLine(), out int length);
+// if (!IsNumber || length == 0)
+// {
+//     Console.WriteLine("Invalid input");
+//     return;
+// }
 
-Random rnd = new Random();
-int[] array = new int[length];
+// Random rnd = new Random();
+// int[] array = new int[length];
 
-for (int i = 0; i < array.Length; i++)
-{
-    array[i] = rnd.Next(1, 99);
-}
+// for (int i = 0; i < array.Length; i++)
+// {
+//     array[i] = rnd.Next(1, 99);
+// }
 
-int GetMaxinArr(int[] array)
-{
-    int max = 0;
-    for (int i = 0; i < array.Length; i++)
-    {
-        if(array[i] > max)
-        {
-            max = array[i];
-        }
-    }
-    return max;
-}
+// int GetMaxinArr(int[] array)
+// {
+//     int max = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if(array[i] > max)
+//         {
+//             max = array[i];
+//         }
+//     }
+//     return max;
+// }
 
-int GetMininArr(int[] array)
-{
-    int min = array[0];
-    for (int i = 0; i < array.Length; i++)
-    {
-        if(array[i] < min)
-        {
-            min = array[i];
-        }
-    }
-    return min;
-}
+// int GetMininArr(int[] array)
+// {
+//     int min = array[0];
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if(array[i] < min)
+//         {
+//             min = array[i];
+//         }
+//     }
+//     return min;
+// }
 
-int result = GetMaxinArr(array) - GetMininArr(array);
+// int result = GetMaxinArr(array) - GetMininArr(array);
 
-Console.WriteLine(string.Join(", ", array));
-Console.WriteLine(GetMaxinArr(array));
-Console.WriteLine(GetMininArr(array));
-Console.WriteLine(result);
+// Console.WriteLine(string.Join(", ", array));
+// Console.WriteLine(GetMaxinArr(array));
+// Console.WriteLine(GetMininArr(array));
+// Console.WriteLine(result);
 
 
 // Задача 36: Задайте одномерный массив, заполненный случайными числами. 
